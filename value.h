@@ -16,12 +16,10 @@ namespace json
         virtual int type() = 0;
         virtual operator std::string() = 0;
         virtual ~value() = 0;
-    protected:
-        static const std::string _type[6];
     };
 
     value::~value() {}
-    const std::string value::_type[6] = { "null","bool","num", "str", "arr", "obj"};
+    static const std::string _type[6] = { "null","bool","num", "str", "arr", "obj"};
 
     enum {
         j_NULL,
