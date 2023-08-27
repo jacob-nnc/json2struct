@@ -3,7 +3,7 @@ c++解析**json**
 ~~~c++
     json2struct a("1.json");
     auto json=a.from();
-    //t 就是解析得到的 json 结构体指针
+    //json 就是解析得到的 json 结构体指针
  
     cout<<(string)(*json)<<endl;
     //输出,且输出是符合 json 格式的
