@@ -5,6 +5,8 @@ using namespace std;
 	{cout << string("error ")+message << endl; \
 	exit(1);}
 
+
+
 struct json2struct
 {
 	using value = json::value;
@@ -54,11 +56,11 @@ private:
 		{
 			if (_t.find('.') != -1)
 			{
-				_val = new json::num<double>(stod(_t));
+				_val = new json::numf(stod(_t));
 			}
 			else
 			{
-				_val = new json::num<int>(stoi(_t));
+				_val = new json::numi(stoi(_t));
 			}
 		}
 		else
@@ -205,4 +207,3 @@ private:
 		return ret;
 	}
 };
-
