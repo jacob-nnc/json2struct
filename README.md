@@ -5,13 +5,13 @@ c++解析**json**
     auto json=a.from();
     //json 就是解析得到的 json 结构体指针
  
-    cout<<(string)(*json)<<endl;
+    cout<<json->toJson()<<endl;
     //输出,且输出是符合 json 格式的
-    fstream("2.json")<<(string)(*json);
+    fstream("2.json")<<json->toJson();
     //将输出写入另一个 json 文件
 
     auto t=json["name"];// 返回指针
-    cout<< (string)(*t)<<endl;
+    cout<< (json::str*)(t)->val<<endl;
     //获取 json 的 某一个key 对应的 value
 
     if(t.type==json::OBJ)
